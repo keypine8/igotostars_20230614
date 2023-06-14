@@ -1,0 +1,90 @@
+# igotostarsDevel_info.txt 
+
+Production of igotostars.html
+
+  - developed on Apple iMac, using vim and Chrome for test/run.
+  - no frameworks used except for jQuery, which is copied into igotostars.html
+  - after being loaded into web browser, igotostars.html never accesses the web
+  - app consists of one single file - igotostars.html
+  - images are all inside igotostars.html file
+  - C code does the planetary calculations and creation of data for reports
+  - C code is translated into javascript by emcc.sh using emscripten. Output is emcc.js
+  - emcc.js is copied into igotostars.html after each C compile
+  - reports are formatted by HTML, CSS, javascript, jQuery
+  - igotostars.html is responsive.  Runs on phone, tablet, laptop, desktop
+
+
+
+========================
+DUMP OF INFO
+========================
+
+OUTPUT OF  env | sort
+------------------------
+
+Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.P3FB8HrVyz/Render
+BINARYEN_ROOT=/Users/rk/_PC/usr/Apple/_C/_wrk/free/emsdk-portable/clang/e1.37.21_64bit/binaryen
+CDPATH=.:/Users/rk:/Users/rk/_PC/usr/apple:/Users/rk/_PC/usr/apple/_c:/Users/rk/_PC/usr/apple/_c/_wrk:/Users/rk/_PC/usr/apple/_c/_wrk/_doall:/Users/rk/_PC/usr::
+EMSCRIPTEN=/Users/rk/_PC/usr/Apple/_C/_wrk/free/emsdk-portable/emscripten/1.37.21
+EMSDK=/Users/rk/_PC/usr/Apple/_C/_wrk/free/emsdk-portable
+EMSDK_CURR=/Users/rk/_PC/usr/apple/_C/_wrk/free/emsdk-portable/emscripten/1.37.21
+EMSDK_ROOT=/Users/rk/_PC/usr/apple/_C/_wrk/free/emsdk-portable
+EM_CONFIG=/Users/rk/.emscripten
+EXINIT=:so /Users/rk/ex.rc
+HISTSIZE=2400
+HOME=/Users/rk
+LANG=en_CA.UTF-8
+LOGNAME=rk
+MYHOME=/Users/rk
+MY_CURRENT_ID=rk
+MY_ID=rk
+OLDPWD=/Users/rk/_PC/usr/apple/_c/_wrk/free/emsdk-portable
+PATH=/usr/local/bin:/Users/rk/_PC/usr/Apple/_C/_wrk/free/emsdk-portable:/Users/rk/_PC/usr/Apple/_C/_wrk/free/emsdk-portable/clang/e1.37.21_64bit:/Users/rk/_PC/usr/Apple/_C/_wrk/free/emsdk-portable/node/4.1.1_64bit/bin:/Users/rk/_PC/usr/Apple/_C/_wrk/free/emsdk-portable/emscripten/1.37.21:.:/Users/rk/bin:/Users/rk/sh:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+PLACE=/Users/rk/_PC/strlgy/place/geonames
+PS1=$ iMac:$PWD  \n$ 
+PWD=/Users/rk/_PC/usr/apple/_c/_wrk/free
+SECURITYSESSIONID=186a8
+SHELL=/bin/ksh
+SHLVL=1
+SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.OekzxrXTtP/Listeners
+TERM=xterm-256color
+TERM_PROGRAM=Apple_Terminal
+TERM_PROGRAM_VERSION=421.2
+TERM_SESSION_ID=FF019066-F591-4DBF-9902-094CE9581B6A
+TMPDIR=/var/folders/xt/2lrgm7gj4q7fg55l1q7t74w40000gn/T/
+USER=rk
+UUNAME=Darwin
+XPC_FLAGS=0x0
+XPC_SERVICE_NAME=0
+_=/usr/bin/env
+
+
+EMSCRIPTEN
+------------------------
+- version is really old and I struggled to get it working right in 2017.  Never updated version. It works.
+- cannot remember any of the installation details below
+- you only need any of this if you make changes to any of the C source files
+
+
+EM_CONFIG=/Users/rk/.emscripten
+------------------------
+import os
+LLVM_ROOT='/Users/rk/_PC/usr/Apple/_C/_wrk/free/emsdk-portable/clang/e1.37.21_64bit'
+EMSCRIPTEN_NATIVE_OPTIMIZER='/Users/rk/_PC/usr/Apple/_C/_wrk/free/emsdk-portable/clang/e1.37.21_64bit/optimizer'
+BINARYEN_ROOT='/Users/rk/_PC/usr/Apple/_C/_wrk/free/emsdk-portable/clang/e1.37.21_64bit/binaryen'
+NODE_JS='/Users/rk/_PC/usr/Apple/_C/_wrk/free/emsdk-portable/node/4.1.1_64bit/bin/node'
+EMSCRIPTEN_ROOT='/Users/rk/_PC/usr/Apple/_C/_wrk/free/emsdk-portable/emscripten/1.37.21'
+SPIDERMONKEY_ENGINE = ''
+V8_ENGINE = ''
+TEMP_DIR = '/var/folders/xt/2lrgm7gj4q7fg55l1q7t74w40000gn/T'
+COMPILER_ENGINE = NODE_JS
+JS_ENGINES = [NODE_JS]
+
+
+igotostarsDevel_emsdkFiles.txt
+------------------------
+This file lists all 18727 files I have in directory tree based on emsdk-portable
+   output of   ls -lR /Users/rk/_PC/usr/Apple/_C/_wrk/free/emsdk-portable
+
+
+#  end of igotostarsDevel_info.txt 

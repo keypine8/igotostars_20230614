@@ -1,0 +1,141 @@
+#!/bin/ksh
+# mkbak   for FREE
+# save newest $KEEP_THIS_MANY $FILES_TO_BACKUP in $DIR_BACKUP
+# name the backup file packages ${SHORT_NAME}.${SUFFIX}.$$
+
+echo "cd /Users/rk/_PC/usr/apple/_c/_wrk/free"
+cd /Users/rk/_PC/usr/apple/_c/_wrk/free
+
+export SHORT_NAME=free
+
+FILES_TO_BACKUP="
+cpToGithub.sh
+ig2sNameChange.sh
+linkedInProfile.txt
+cfns.sh
+goldCfns.txt
+jquery-3.3.1.js
+save_jquery
+save_emcc.js
+emcc.sh
+per_emcc_my2.html
+MAMB_mindmap.m
+mkbak
+mkbakgui
+makeprod.sh
+namesToReplace.sh
+goldclassesinC.txt
+goldclassesinjs.txt
+goldgblsvar.txt	
+goldidsinC.txt
+goldidsinjs.txt
+goldnames.txt
+goldparams.txt
+goldvarvars.txt
+shuffle.sh
+OLD.txt
+console.c
+s.sh
+prunehtml.sh
+gvimrc_SAVE*
+macVimSynHIcategories.txt
+person_*
+*track*
+icon*
+igotostarsDevel_info.txt
+igotostarsDevel_emsdkFiles.txt
+appNav*
+futasp.c
+futdefs.h
+futdoc.c
+futdoc.h
+futhtm.c
+futhtm.h
+mambutil.c
+grpdoc.h
+grpdoc.c
+grphtm.c
+incocoa.c
+incocoa.h
+perdoc.c
+perdoc.h
+perhtm.c
+perhtm.h
+rkdebug.c
+rkdebug.h
+rkdebug_externs.h
+rktest.c
+rktest.sh
+Makefile
+/Users/rk/.vim/colors/blue.vim
+/Users/rk/.vim/colors/desert.vim
+/Users/rk/.vim/colors/rkblue.vim
+/Users/rk/.vim/colors/rkbrown.vim
+/Users/rk/.vim/colors/rkgreen.vim
+/Users/rk/.vim/colors/rknormal.vim
+/Users/rk/.vim/colors/rkorange.vim
+/Users/rk/.vim/colors/rkyellow.vim
+/Users/rk/.vim/colors/sean.vim
+"
+
+#/Users/rk/_PC/usr/Apple/_C/_wrk/free/marketing/AD_redStar_21.rtfd
+#/Users/rk/_PC/usr/Apple/_C/_wrk/free/marketing/side_images_23.rtfd
+
+for f in  $FILES_TO_BACKUP
+do
+  echo $f
+done | pr -t -w132
+#done | pr -t -w132 -2
+#done | pr -t -w132 -3
+#done | pr -t -w132 -4
+
+export SUFFIX=bak
+export DIR_BACKUP=_bak
+export KEEP_THIS_MANY=36
+
+mkdir $DIR_BACKUP 2>/dev/null
+
+NOW_YYYYMMDD24MMSS=`date '+%Y%m%d_%H%M%S'`
+
+PKG_NAME="${DIR_BACKUP}/${SHORT_NAME}.${SUFFIX}.${NOW_YYYYMMDD24MMSS}"
+
+#pg $FILES_TO_BACKUP > $PKG_NAME  # make package
+#less $FILES_TO_BACKUP > $PKG_NAME  # make package
+
+for fil in $FILES_TO_BACKUP
+do
+  echo "::::::::::::::"
+  echo "$fil"
+  echo "::::::::::::::"
+  cat "$fil"
+done  >${PKG_NAME}      # make package
+
+
+# compress it  (gzip -d to decompress the resulting ".gz")
+# 
+gzip $PKG_NAME   # compress package
+
+delete_me=`ls -t ${DIR_BACKUP} | sed "1,${KEEP_THIS_MANY}d"`  # grab oldest
+for f in $delete_me
+do
+  /bin/rm ${DIR_BACKUP}/$f      # delete oldest
+done
+
+
+
+# mkbakgui backs up local files, so not put to github  (development diary, notes, ...)
+# ===================================================================================
+echo "backing up notes stuff ..."
+./mkbakgui
+# ===================================================================================
+
+
+# # ===================================================================================
+# echo "backing up MAMB stuff ..."
+# ./mkbakmamb
+# # ===================================================================================
+# 
+
+
+
+# end of mkbak   for FREE

@@ -1,0 +1,10 @@
+arg_alphabet
+arg_bitsPerChar
+arg_character
+arg_compressed
+arg_getCharFromInt
+arg_getNextValue
+arg_input
+arg_resetValue
+arg_uncompressed
+smup_place_text

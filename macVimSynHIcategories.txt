@@ -1,0 +1,227 @@
+=====================================================
+=====  macvim syntax highlighting categories
+=====================================================
+
+/////////////////
+// javascript
+/////////////////
+  HiLink javaScriptComment		Comment
+  HiLink javaScriptLineComment		Comment
+  HiLink javaScriptCommentTodo		Todo
+  HiLink javaScriptSpecial		Special
+  HiLink javaScriptStringS		String
+  HiLink javaScriptStringD		String
+  HiLink javaScriptCharacter		Character
+  HiLink javaScriptSpecialCharacter	javaScriptSpecial
+  HiLink javaScriptNumber		javaScriptValue
+  HiLink javaScriptConditional		Conditional
+  HiLink javaScriptRepeat		Repeat
+  HiLink javaScriptBranch		Conditional
+  HiLink javaScriptOperator		Operator
+  HiLink javaScriptType			Type
+  HiLink javaScriptStatement		Statement
+  HiLink javaScriptFunction		Function
+  HiLink javaScriptBraces		Function
+  HiLink javaScriptError		Error
+  HiLink javaScrParenError		javaScriptError
+  HiLink javaScriptNull			Keyword
+  HiLink javaScriptBoolean		Boolean
+  HiLink javaScriptRegexpString		String
+
+  HiLink javaScriptIdentifier		Identifier
+  HiLink javaScriptLabel		Label
+  HiLink javaScriptException		Exception
+  HiLink javaScriptMessage		Keyword
+  HiLink javaScriptGlobal		Keyword
+  HiLink javaScriptMember		Keyword
+  HiLink javaScriptDeprecated		Exception 
+  HiLink javaScriptReserved		Keyword
+  HiLink javaScriptDebug		Debug
+  
+
+/////////////////
+// HTML
+/////////////////
+  HiLink javaScriptConstant		Label
+  HtmlHiLink htmlTag                     Function
+  HtmlHiLink htmlEndTag                  Identifier
+  HtmlHiLink htmlArg                     Type
+  HtmlHiLink htmlTagName                 htmlStatement
+  HtmlHiLink htmlSpecialTagName          Exception
+  HtmlHiLink htmlValue                     String
+  HtmlHiLink htmlSpecialChar             Special
+  if !exists("html_no_rendering")
+    HtmlHiLink htmlH1                      Title
+    HtmlHiLink htmlH2                      htmlH1
+    HtmlHiLink htmlH3                      htmlH2
+    HtmlHiLink htmlH4                      htmlH3
+    HtmlHiLink htmlH5                      htmlH4
+    HtmlHiLink htmlH6                      htmlH5
+    HtmlHiLink htmlHead                    PreProc
+    HtmlHiLink htmlTitle                   Title
+    HtmlHiLink htmlBoldItalicUnderline     htmlBoldUnderlineItalic
+    HtmlHiLink htmlUnderlineBold           htmlBoldUnderline
+    HtmlHiLink htmlUnderlineItalicBold     htmlBoldUnderlineItalic
+    HtmlHiLink htmlUnderlineBoldItalic     htmlBoldUnderlineItalic
+    HtmlHiLink htmlItalicUnderline         htmlUnderlineItalic
+    HtmlHiLink htmlItalicBold              htmlBoldItalic
+    HtmlHiLink htmlItalicBoldUnderline     htmlBoldUnderlineItalic
+    HtmlHiLink htmlItalicUnderlineBold     htmlBoldUnderlineItalic
+    HtmlHiLink htmlLink                    Underlined
+    HtmlHiLink htmlLeadingSpace            None
+  endif
+  
+  HtmlHiLink htmlPreStmt            PreProc
+  HtmlHiLink htmlPreError           Error
+  HtmlHiLink htmlPreProc            PreProc
+  HtmlHiLink htmlPreAttr            String
+  HtmlHiLink htmlPreProcAttrName    PreProc
+  HtmlHiLink htmlPreProcAttrError   Error
+  HtmlHiLink htmlSpecial            Special
+  HtmlHiLink htmlSpecialChar        Special
+  HtmlHiLink htmlString             String
+  HtmlHiLink htmlStatement          Statement
+  HtmlHiLink htmlComment            Comment
+  HtmlHiLink htmlCommentPart        Comment
+  HtmlHiLink htmlValue              String
+  HtmlHiLink htmlCommentError       htmlError
+  HtmlHiLink htmlTagError           htmlError
+  HtmlHiLink htmlEvent              javaScript
+  HtmlHiLink htmlError              Error
+  
+  HtmlHiLink javaScript             Special
+  HtmlHiLink javaScriptExpression   javaScript
+  HtmlHiLink htmlCssStyleComment    Comment
+  HtmlHiLink htmlCssDefinition      Special
+
+
+/////////////////
+// CSS
+/////////////////
+  HiLink cssComment Comment
+  HiLink cssVendor Comment
+  HiLink cssHacks Comment
+  HiLink cssTagName Statement
+  HiLink cssDeprecated Error
+  HiLink cssSelectorOp Special
+  HiLink cssSelectorOp2 Special
+  HiLink cssAttrComma Special
+
+  HiLink cssAnimationProp cssProp
+  HiLink cssBackgroundProp cssProp
+  HiLink cssBorderProp cssProp
+  HiLink cssBoxProp cssProp
+  HiLink cssColorProp cssProp
+  HiLink cssContentForPagedMediaProp cssProp
+  HiLink cssDimensionProp cssProp
+  HiLink cssFlexibleBoxProp cssProp
+  HiLink cssFontProp cssProp
+  HiLink cssGeneratedContentProp cssProp
+  HiLink cssGridProp cssProp
+  HiLink cssHyerlinkProp cssProp
+  HiLink cssLineboxProp cssProp
+  HiLink cssListProp cssProp
+  HiLink cssMarqueeProp cssProp
+  HiLink cssMultiColumnProp cssProp
+  HiLink cssPagedMediaProp cssProp
+  HiLink cssPositioningProp cssProp
+  HiLink cssPrintProp cssProp
+  HiLink cssRubyProp cssProp
+  HiLink cssSpeechProp cssProp
+  HiLink cssTableProp cssProp
+  HiLink cssTextProp cssProp
+  HiLink cssTransformProp cssProp
+  HiLink cssTransitionProp cssProp
+  HiLink cssUIProp cssProp
+  HiLink cssIEUIProp cssProp
+  HiLink cssAuralProp cssProp
+  HiLink cssRenderProp cssProp
+  HiLink cssMobileTextProp cssProp
+
+  HiLink cssAnimationAttr cssAttr
+  HiLink cssBackgroundAttr cssAttr
+  HiLink cssBorderAttr cssAttr
+  HiLink cssBoxAttr cssAttr
+  HiLink cssContentForPagedMediaAttr cssAttr
+  HiLink cssDimensionAttr cssAttr
+  HiLink cssFlexibleBoxAttr cssAttr
+  HiLink cssFontAttr cssAttr
+  HiLink cssGeneratedContentAttr cssAttr
+  HiLink cssGridAttr cssAttr
+  HiLink cssHyerlinkAttr cssAttr
+  HiLink cssLineboxAttr cssAttr
+  HiLink cssListAttr cssAttr
+  HiLink cssMarginAttr cssAttr
+  HiLink cssMarqueeAttr cssAttr
+  HiLink cssMultiColumnAttr cssAttr
+  HiLink cssPaddingAttr cssAttr
+  HiLink cssPagedMediaAttr cssAttr
+  HiLink cssPositioningAttr cssAttr
+  HiLink cssGradientAttr cssAttr
+  HiLink cssPrintAttr cssAttr
+  HiLink cssRubyAttr cssAttr
+  HiLink cssSpeechAttr cssAttr
+  HiLink cssTableAttr cssAttr
+  HiLink cssTextAttr cssAttr
+  HiLink cssTransformAttr cssAttr
+  HiLink cssTransitionAttr cssAttr
+  HiLink cssUIAttr cssAttr
+  HiLink cssIEUIAttr cssAttr
+  HiLink cssAuralAttr cssAttr
+  HiLink cssRenderAttr cssAttr
+  HiLink cssCommonAttr cssAttr
+
+  HiLink cssPseudoClassId PreProc
+  HiLink cssPseudoClassLang Constant
+  HiLink cssValueLength Number
+  HiLink cssValueInteger Number
+  HiLink cssValueNumber Number
+  HiLink cssValueAngle Number
+  HiLink cssValueTime Number
+  HiLink cssValueFrequency Number
+  HiLink cssFunction Constant
+  HiLink cssURL String
+  HiLink cssFunctionName Function
+  HiLink cssFunctionComma Function
+  HiLink cssColor Constant
+  HiLink cssIdentifier Function
+  HiLink cssInclude Include
+  HiLink cssIncludeKeyword atKeyword
+  HiLink cssImportant Special
+  HiLink cssBraces Function
+  HiLink cssBraceError Error
+  HiLink cssError Error
+  HiLink cssUnicodeEscape Special
+  HiLink cssStringQQ String
+  HiLink cssStringQ String
+  HiLink cssAttributeSelector String
+  HiLink cssMedia atKeyword
+  HiLink cssMediaType Special
+  HiLink cssMediaComma Normal
+  HiLink cssMediaKeyword Statement
+  HiLink cssMediaProp cssProp
+  HiLink cssMediaAttr cssAttr
+  HiLink cssPage atKeyword
+  HiLink cssPagePseudo PreProc
+  HiLink cssPageMargin atKeyword
+  HiLink cssPageProp cssProp
+  HiLink cssKeyFrame atKeyword
+  HiLink cssKeyFrameSelector Constant
+  HiLink cssFontDescriptor Special
+  HiLink cssFontDescriptorFunction Constant
+  HiLink cssFontDescriptorProp cssProp
+  HiLink cssFontDescriptorAttr cssAttr
+  HiLink cssUnicodeRange Constant
+  HiLink cssClassName Function
+  HiLink cssClassNameDot Function
+  HiLink cssProp StorageClass
+  HiLink cssAttr Constant
+  HiLink cssUnitDecorators Number
+  HiLink cssNoise Noise
+  HiLink atKeyword Comment
+  delcommand HiLink
+endif
+
+=====================================================
+=====  END OF  macvim syntax highlighting categories
+=====================================================
